@@ -1,6 +1,6 @@
-import React, { useRef, useMemo, useEffect, useState } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Stars, OrbitControls, Trail } from "@react-three/drei";
+import React, { useMemo, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Stars, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { usePrediction } from "../hooks/useApi";
 
@@ -157,7 +157,7 @@ function MagneticLines({ level }) {
       }
       return new THREE.CatmullRomCurve3(points).getPoints(50);
     });
-  }, [level, colors.intensity]);
+  }, [colors.intensity]);
 
   if (level === "LOW") return null;
 
@@ -177,7 +177,7 @@ function MagneticLines({ level }) {
 
 // ── HUD overlay ───────────────────────────────────────────────────────────────
 function HUD({ pred, level }) {
-  const colors = LEVEL_COLORS[level] || LEVEL_COLORS.LOW;
+  
   const levelColors = { LOW: "#22d3a0", MODERATE: "#f59e0b", HIGH: "#f97316", EXTREME: "#ef4444" };
 
   return (
