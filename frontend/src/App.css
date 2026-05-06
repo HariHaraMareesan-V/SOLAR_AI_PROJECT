@@ -1,0 +1,137 @@
+/* ===== MAIN LAYOUT ===== */
+.app {
+  display: flex;
+  height: 100vh;
+  background: #0f172a;
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #1e293b;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #94a3b8;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.nav-link.active {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* ===== GRID ===== */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* ===== TEXT ===== */
+.card-title {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.card-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ===== ALERT ===== */
+.alert-banner {
+  background: #ef4444;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ===== LOG PANEL ===== */
+.log-panel {
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+/* ===== STORM BADGE ===== */
+.storm-badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.storm-LOW { background: #22c55e; }
+.storm-MODERATE { background: #f59e0b; }
+.storm-HIGH { background: #ef4444; }
+.storm-EXTREME { background: #a855f7; }
+
+/* ===== CONFIDENCE BAR ===== */
+.conf-bar-wrap {
+  background: #334155;
+  height: 6px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.conf-bar {
+  height: 6px;
+  border-radius: 4px;
+}
